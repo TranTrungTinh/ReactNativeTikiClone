@@ -1,12 +1,14 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, StyleSheet, Text,  } from 'react-native';
-import { Container, Content, Icon } from 'native-base';
+import { Container, Content, Icon} from 'native-base';
 
 //import component
 import HeaderComponent from './Header/HeaderComponent';
+import DeliveryComponent from './Header/DeliveryComponent';
 import SwiperComponent from './Header/SwiperComponent';
 import CategoryComponent from './Header/CategoryComponent';
+import ConvinientComponent from './Header/ConvinientComponent';
 // create a component
 class MainScreen extends Component {
   render() {
@@ -14,13 +16,10 @@ class MainScreen extends Component {
       <Container style={styles.container}>
         <HeaderComponent />
         <Content style={styles.content}>
-          <View style={styles.deliveryContainer}>
-            <Icon type="MaterialCommunityIcons" name="map-marker" style={styles.colorWhite}/>
-            <Text style={styles.colorWhite}>Giao hàng tới: Xã Bình Hưng, Huyện Bình Chánh, TPHCM</Text>
-          </View>
+          <DeliveryComponent />
           <SwiperComponent />
           <CategoryComponent />
-          
+          <ConvinientComponent />
         </Content>
       </Container>
     );
@@ -36,17 +35,7 @@ const styles = StyleSheet.create({
   content: {
     marginTop: 50
   },
-  deliveryContainer: {
-    height: 50,
-    backgroundColor: '#3179c5',
-    flexDirection: 'row',
-    alignItems: 'center'
-    // justifyContent: 'center'
-  },
-  colorWhite: {
-    color: '#fff',
-    paddingRight: 10
-  },
+  
   
 });
 
