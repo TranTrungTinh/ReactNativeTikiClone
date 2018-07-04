@@ -1,17 +1,24 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { DrawerNavigator } from 'react-navigation';
+import { YellowBox } from 'react-native';
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+YellowBox.ignoreWarnings(['Class RCTCxxModule']);
+import MainScreen from './src/components/MainScreen';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      <AppDrawerNavigator />
     );
   }
 }
+
+const AppDrawerNavigator = DrawerNavigator({
+  MainScreen: {
+    screen: MainScreen
+  }
+});
 
 const styles = StyleSheet.create({
   container: {
