@@ -42,7 +42,7 @@ const CartItemComponent = (props) => {
 // define your styles
 const styles = StyleSheet.create({
   cartItemWrap: {
-    paddingTop: 10,
+    paddingTop: 15,
     width: width / 2 - 14,
     height: 350,
     backgroundColor: '#fff',
@@ -55,8 +55,9 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   cartInfo: {
-    flex: 1,
+    flex: 2,
     alignItems: 'flex-start',
+    justifyContent: 'center',
     height: 150,
     paddingHorizontal: 20
   },
@@ -66,12 +67,14 @@ const styles = StyleSheet.create({
   },
   cartInfoTitle: {
     fontSize: 16,
-    fontWeight: '300'
+    fontWeight: '300',
+    paddingTop: 5
   },
   cartInfoPrice: {
     fontSize: 19,
     color: 'red',
-    fontWeight: '700'
+    fontWeight: '700',
+    paddingTop: 5
   },
   cartInfoConten: {
     flexDirection: 'row', 
