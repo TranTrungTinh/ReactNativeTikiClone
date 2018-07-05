@@ -4,12 +4,12 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Header, Left, Right, Body, Icon, Title, Item, Input, Badge } from 'native-base';
 
 // create a component
-const HeaderComponent = () => {
+const HeaderComponent = (props) => {
   return (
     <View>
       <Header style={styles.header} >
         <Left style={styles.leftIcon} >
-          <Icon name="md-menu" style={styles.menuIcon}/>
+            <Icon name="md-menu" style={styles.menuIcon} onPress={() => props.navigation.navigate('DrawerOpen')}/>
         </Left>
         <Body>
           <Title style={styles.headerTitle} >TIKI.VN</Title>

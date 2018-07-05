@@ -35,7 +35,7 @@ class MainScreen extends Component {
   render() {
     return (
       <Container style={styles.container}>
-        <HeaderComponent />
+        <HeaderComponent {...this.props}/>
         <Content style={styles.content}>
           <DeliveryComponent />
           <SwiperComponent />
